@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileProject.WebAPI", "Agil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileProject.Data", "AgileProject.Data\AgileProject.Data.csproj", "{860000FC-3EE5-4CE3-B019-CB9DF5D44B9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileProject.Models", "AgileProject.Models\AgileProject.Models.csproj", "{423E6944-71CB-4B5F-83F3-F0793AED6D82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileProject.Services", "AgileProject.Services\AgileProject.Services.csproj", "{E8E6FF9B-3EDE-44E8-B2B8-482A088C6EB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{860000FC-3EE5-4CE3-B019-CB9DF5D44B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{860000FC-3EE5-4CE3-B019-CB9DF5D44B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{860000FC-3EE5-4CE3-B019-CB9DF5D44B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423E6944-71CB-4B5F-83F3-F0793AED6D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423E6944-71CB-4B5F-83F3-F0793AED6D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423E6944-71CB-4B5F-83F3-F0793AED6D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423E6944-71CB-4B5F-83F3-F0793AED6D82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E6FF9B-3EDE-44E8-B2B8-482A088C6EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E6FF9B-3EDE-44E8-B2B8-482A088C6EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E6FF9B-3EDE-44E8-B2B8-482A088C6EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E6FF9B-3EDE-44E8-B2B8-482A088C6EB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
