@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileProject.WebAPI", "AgileProject.WebAPI\AgileProject.WebAPI.csproj", "{60B38C79-134C-4C5C-9908-B894749DE815}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileProject.Data", "AgileProject.Data\AgileProject.Data.csproj", "{860000FC-3EE5-4CE3-B019-CB9DF5D44B9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{60B38C79-134C-4C5C-9908-B894749DE815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60B38C79-134C-4C5C-9908-B894749DE815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60B38C79-134C-4C5C-9908-B894749DE815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860000FC-3EE5-4CE3-B019-CB9DF5D44B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860000FC-3EE5-4CE3-B019-CB9DF5D44B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860000FC-3EE5-4CE3-B019-CB9DF5D44B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860000FC-3EE5-4CE3-B019-CB9DF5D44B9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
