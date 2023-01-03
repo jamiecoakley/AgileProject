@@ -24,7 +24,7 @@ namespace AgileProject.WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateGame([FromBody] GameCreate request)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             if (await _gameService.CreateGameAsync(request))
@@ -49,6 +49,17 @@ namespace AgileProject.WebAPI.Controllers
             return await _gameService.UpdateGameAsync(request)
                 ? Ok("Game entry updated successfully!")
                 : BadRequest("Game entry was not updated.");
+        }
+
+        [HttpGet]
+        [Route("{gameId}")]
+        public async Task<IActionResult> GetGameByGameSystemId([FromRoute] int gameId)
+        {
+            var detail = await _gameService.GetGameByGameSystem(gameId);
+
+            return detail is not null
+                ? Ok(detail)
+                : NotFound();
         }
     }
 }

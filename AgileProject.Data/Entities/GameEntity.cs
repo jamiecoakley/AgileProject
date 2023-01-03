@@ -15,8 +15,9 @@ namespace AgileProject.Data.Entities
         [Required]
         public string Title { get; set; }
 
-        //[ForeignKey(nameof(GameSystem))]
-        //public GameSystemEntity GameSystem { get; set; }
+        [ForeignKey(nameof(GameSystem))]
+        public int GameSystemId { get; set; }
+        public virtual GameSystemEntity GameSystem { get; set; }
 
         //[Required]
         //public GenreEntity GameGenre {get;set;}
