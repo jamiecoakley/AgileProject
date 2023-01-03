@@ -8,6 +8,7 @@ using AgileProject.Models.GameViewModels;
 using AgileProject.Data;
 using Microsoft.EntityFrameworkCore;
 using AgileProject.Data.Entities;
+using AgileProject.Models.GameSystemModels;
 
 namespace AgileProject.Services.Game
 {
@@ -45,7 +46,7 @@ namespace AgileProject.Services.Game
         {
             var games = await _dbContext.Games
                 //.Where (entity => entity.OwnerId == _userId)
-                .Select (entity => new GameListItem
+                .Select(entity => new GameListItem
                 {
                     // Id = entity.Id,
                     Title = entity.Title,
@@ -55,6 +56,19 @@ namespace AgileProject.Services.Game
                 .ToListAsync();
 
             return games;
+        }
+
+        public async Task<GameDetails> GetGameByGameSystem(int gameId)
+        {
+            var gameEntity = await _dbContext.Games
+            .FirstOrDefaultAsync(e =>
+            e.Id == gameId && e.GameSystemId == _userId);
+
+            return gameEntity is null ? null : new GameDetails
+            {
+                Id = gameEntity.Id,
+                Title = gameEntity.Title
+            };
         }
 
         public async Task<bool> UpdateGameAsync(GameUpdate request)

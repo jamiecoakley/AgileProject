@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AgileProject.Models.GameSystemModels;
 using AgileProject.Models.GameViewModels;
 
 namespace AgileProject.Services.Game
@@ -11,5 +12,6 @@ namespace AgileProject.Services.Game
         Task<bool> CreateGameAsync(GameCreate request);
         Task<IEnumerable<GameListItem>> GetAllGamesAsync();
         Task<bool> UpdateGameAsync(GameUpdate request);
+        Task<GameDetails> GetGameByGameSystem(int gameId);
     }
 }

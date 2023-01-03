@@ -12,6 +12,6 @@ namespace AgileProject.Services.GameSystems
         Task<bool> CreateGameSystemsAsync(GameSystemCreate request);
         Task<IEnumerable<GameSystemListItem>> GetAllGameSystemsAsync();
         Task<bool> UpdateGameSystemAsync(GameSystemUpdate request);
-        Task<bool> DeleteGameSystemAsync (int GameSystemId);
+        Task<bool> DeleteGameSystemAsync(int GameSystemId);
     }
 }
