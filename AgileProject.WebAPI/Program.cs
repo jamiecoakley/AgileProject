@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using AgileProject.Data;
+using AgileProject.Services.Game;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,10 @@ builder.Services.AddSwaggerGen(c =>
     {
         c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo {Title = "AgileProject.WebAPI", Version = "v1"});
     });
+
+builder.Services.AddScoped<IGames, Games>();
+
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
