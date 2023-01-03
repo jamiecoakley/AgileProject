@@ -30,8 +30,6 @@ namespace AgileProject.Services.GameSystem
 
             var numberOfChanges = await _dbContext.SaveChangesAsync();
             return numberOfChanges == 1;
-
-            throw new NotImplementedException();
         }
 
         // public async Task<bool> DeleteGameSystemAsync(int GameSystemId)
@@ -44,7 +42,6 @@ namespace AgileProject.Services.GameSystem
         //     _dbContext.GameSystems.Remove(GameSystemEntity);
         //     return await _dbContext.SaveChangesAsync() == 1;
 
-        //     throw new NotImplementedException();
         // }
 
         public async Task<IEnumerable<GameSystemListItem>> GetAllGameSystemsAsync()
@@ -56,7 +53,7 @@ namespace AgileProject.Services.GameSystem
             })
             .ToListAsync();
 
-            throw new NotImplementedException();
+            return gameSystems;
         }
 
         public async Task<bool> UpdateGameSystemAsync(GameSystemUpdate request)
@@ -66,7 +63,8 @@ namespace AgileProject.Services.GameSystem
             GameSystemEntity.SystemName = request.SystemName;
 
             var numberOfChanges = await _dbContext.SaveChangesAsync();
-            throw new NotImplementedException();
+
+            return numberOfChanges == 1;
         }
     }
 }
