@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace AgileProject.Services.Game
 {
-    public class Games
+    public class Games : IGames
     {
-        
+
     }
 }
