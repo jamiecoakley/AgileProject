@@ -53,12 +53,12 @@ namespace AgileProject.WebAPI.Controllers
             : BadRequest("Game System could not be updated.");
         }
 
-        [HttpDelete("gameSystemId:int")]
-        public async Task<IActionResult> DeleteGameSystem([FromRoute] int gameSystemId)
-        {
-            return await _gameSystems.DeleteGameSystemAsync(gameSystemId)
-            ? Ok($"Game System {gameSystemId} was deleted successfully.")
-            : BadRequest($"Game System {gameSystemId} could not be deleted.");
-        }
+        // [HttpDelete("gameSystemId:int")]
+        // public async Task<IActionResult> DeleteGameSystem([FromRoute] int gameSystemId)
+        // {
+        //     return await _gameSystems.DeleteGameSystemAsync(gameSystemId)
+        //     ? Ok($"Game System {gameSystemId} was deleted successfully.")
+        //     : BadRequest($"Game System {gameSystemId} could not be deleted.");
+        // }
     }
 }
