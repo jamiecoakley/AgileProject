@@ -25,7 +25,7 @@ namespace AgileProject.WebAPI.Controllers
         public async Task<IActionResult> GetAllGameSystems()
         {
             var gameSystems = await _gameSystems.GetAllGameSystemsAsync();
-                return Ok(gameSystems);
+            return Ok(gameSystems);
         }
 
         // Post API/GameSystem
@@ -33,10 +33,10 @@ namespace AgileProject.WebAPI.Controllers
         public async Task<IActionResult> CreateGameSystem([FromBody] GameSystemCreate request)
         {
             if (!ModelState.IsValid)
-            return BadRequest(ModelState);
+                return BadRequest(ModelState);
 
             if (await _gameSystems.CreateGameSystemsAsync(request))
-            return Ok("Game System created successfully.");
+                return Ok("Game System created successfully.");
 
             return BadRequest("Game System could not be created.");
         }
@@ -46,7 +46,7 @@ namespace AgileProject.WebAPI.Controllers
         public async Task<IActionResult> UpdateGameSystemById([FromBody] GameSystemUpdate request)
         {
             if (!ModelState.IsValid)
-            return BadRequest(ModelState);
+                return BadRequest(ModelState);
 
             return await _gameSystems.UpdateGameSystemAsync(request)
             ? Ok("Game System updated successfully.")
