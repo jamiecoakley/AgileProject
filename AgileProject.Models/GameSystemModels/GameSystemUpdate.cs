@@ -6,10 +6,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AgileProject.Models.GameSystemModels
 {
-    public class GameSystemCreate
+    public class GameSystemUpdate
     {
         [Required]
-        [MinLength(2, ErrorMessage = "{0} must be at least 1 characters long.")]
+        public int Id { get; set; }
+
+        [Required]
+        [MinLength(2, ErrorMessage = "{0} must be at least {1} characters long.")]
         [MaxLength(100, ErrorMessage = "{0} must contain no more than {1} characters.")]
         public string SystemName { get; set; }
     }
