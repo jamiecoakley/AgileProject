@@ -34,18 +34,18 @@ namespace AgileProject.Services.GameSystem
             throw new NotImplementedException();
         }
 
-        public async Task<bool> DeleteGameSystemAsync(int GameSystemId)
-        {
-            var GameSystemEntity = await _dbContext.GameSystems.FindAsync(GameSystemId);
+        // public async Task<bool> DeleteGameSystemAsync(int GameSystemId)
+        // {
+        //     var GameSystemEntity = await _dbContext.GameSystems.FindAsync(GameSystemId);
 
-            if (GameSystemEntity?.GameSystemId != 1)
-                return false;
+        //     if (GameSystemEntity?.GameSystemId != 1)
+        //         return false;
 
-            _dbContext.GameSystems.Remove(GameSystemEntity);
-            return await _dbContext.SaveChangesAsync() == 1;
+        //     _dbContext.GameSystems.Remove(GameSystemEntity);
+        //     return await _dbContext.SaveChangesAsync() == 1;
 
-            throw new NotImplementedException();
-        }
+        //     throw new NotImplementedException();
+        // }
 
         public async Task<IEnumerable<GameSystemListItem>> GetAllGameSystemsAsync()
         {
